@@ -1,35 +1,35 @@
-import java.util.Stack;
+import java.util.*;
 
 public class PalindromeCheckerApp {
-
     public static void main(String[] args) {
 
-        System.out.println("Palindrome Checker App - UC5 (Stack Method)");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
 
-        String input = "noon";   // hardcoded input from assignment
-
-        // Create stack
         Stack<Character> stack = new Stack<>();
+        Queue<Character> queue = new LinkedList<>();
 
-        // Push characters into stack
-        for(char c : input.toCharArray()){
+        // Push characters into both stack and queue
+        for(char c : input.toCharArray()) {
             stack.push(c);
+            queue.add(c);
         }
 
-        // Compare with popped characters
         boolean isPalindrome = true;
 
-        for(char c : input.toCharArray()){
-            if(c != stack.pop()){
+        while(!stack.isEmpty()) {
+            if(stack.pop() != queue.remove()) {
                 isPalindrome = false;
                 break;
             }
         }
 
-        // Print result
         if(isPalindrome)
             System.out.println(input + " is a Palindrome");
         else
             System.out.println(input + " is NOT a Palindrome");
+
+        scanner.close();
     }
 }
