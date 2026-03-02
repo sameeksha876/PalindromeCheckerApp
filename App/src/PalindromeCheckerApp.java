@@ -1,29 +1,41 @@
+import java.util.Scanner;
+
 public class PalindromeCheckerApp {
-
-    // Recursive function
-    private static boolean checkPalindrome(String s, int start, int end) {
-
-        // Base condition → if pointers cross, string is palindrome
-        if (start >= end) {
-            return true;
-        }
-
-        // If mismatch found → not palindrome
-        if (s.charAt(start) != s.charAt(end)) {
-            return false;
-        }
-
-        // Recursive call (move inward)
-        return checkPalindrome(s, start + 1, end - 1);
-    }
 
     public static void main(String[] args) {
 
-        String input = "madam";
+        Scanner sc = new Scanner(System.in);
 
-        boolean result = checkPalindrome(input, 0, input.length() - 1);
+        System.out.println("=== UC10 : Case-Insensitive & Space-Ignored Palindrome ===");
+        System.out.print("Enter a sentence: ");
+        String input = sc.nextLine();
 
-        System.out.println("Input : " + input);
-        System.out.println("Is Palindrome : " + result);
+        // STEP 1: Normalize string
+        // remove spaces & special characters + convert to lowercase
+        String normalized = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+
+        // STEP 2: Apply palindrome logic (two-pointer)
+        boolean isPalindrome = true;
+        int start = 0;
+        int end = normalized.length() - 1;
+
+        while (start < end) {
+            if (normalized.charAt(start) != normalized.charAt(end)) {
+                isPalindrome = false;
+                break;
+            }
+            start++;
+            end--;
+        }
+
+        // STEP 3: Output result
+        System.out.println("Normalized string: " + normalized);
+
+        if (isPalindrome)
+            System.out.println("Result: Palindrome ✅");
+        else
+            System.out.println("Result: NOT Palindrome ❌");
+
+        sc.close();
     }
 }
