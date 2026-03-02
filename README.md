@@ -1,154 +1,146 @@
 # PalindromeCheckerApp
 
-## Palindrome Checker App (Java Console Application)
+## 📌 Objective
+To build a console-based Java application that checks whether a string is a palindrome using multiple Data Structure and Algorithm approaches.
 
-### Objective
-To build a console-based Java application that checks whether a string is a palindrome using multiple approaches across incremental use cases.
-
-This project demonstrates **Git workflow + incremental development** using branches and pull requests.
+This project was developed incrementally using Git branches for each Use Case (UC).
 
 ---
 
-## What is a Palindrome?
+## 🚀 Features / Use Cases Implemented
 
-A palindrome is a word, phrase, or number that reads the same forward and backward.
-
-**Examples**
-- madam ✅
-- racecar ✅
-- hello ❌
-
----
-
-# Use Case Implementations
-
-## UC1 — Welcome Page
-Displays application startup information.
-
-**Features**
-- Application name
-- Version number
-- Initialization message
-
-**Concepts Used**
-- Basic Java program structure
-- Git branching & pull request workflow
+### UC1 – Welcome Page
+Displays:
+- Application Name
+- Version
+- Initialization Message
 
 ---
 
-## UC2 — Hardcoded Palindrome Check
-Checks whether a hardcoded word is a palindrome using character comparison.
-
-**Logic**
-- Compare characters from start and end moving inward.
-
-**Concepts Used**
-- Loops
-- `charAt()` method
+### UC2 – Hardcoded Palindrome Check
+Checks palindrome using a fixed string and loop comparison.
 
 ---
 
-## UC3 — Palindrome Using String Reverse
-Checks palindrome by reversing the string.
-
-**Logic**
-1. Reverse the string
-2. Compare original and reversed strings
-
-**Concepts Used**
-- String manipulation
-- Reverse logic
+### UC3 – String Reverse Method
+Reverses string and compares with original.
 
 ---
 
-## UC4 — Character Array Method
-Checks palindrome using two-pointer technique on a character array.
-
-**Logic**
-- Convert string → char array
-- Compare start and end pointers
-
-**Concepts Used**
-- Arrays
-- Two-pointer algorithm
+### UC4 – Character Array Approach
+Uses two-pointer technique on char array.
 
 ---
 
-## UC5 — Stack Based Palindrome Checker
-Uses **Stack (LIFO)** data structure.
+### UC5 – Stack-Based Palindrome Check
+Uses Stack (LIFO) to reverse characters.
 
-**Logic**
-1. Push characters into stack
-2. Pop characters and compare
-
-**Concepts Used**
-- Stack
-- LIFO principle
+Data Structure used:
+- `Stack<Character>`
 
 ---
 
-## UC6 — Queue + Stack Based Palindrome Checker
-Uses both **Queue (FIFO)** and **Stack (LIFO)**.
+### UC6 – Queue + Stack Comparison
+Uses:
+- Queue (FIFO)
+- Stack (LIFO)
 
-**Logic**
-1. Add characters to Queue and Stack
-2. Remove from both and compare
-
-If all match → Palindrome ✔️
-
-**Concepts Used**
-- Queue
-- Stack
-- FIFO vs LIFO
+Validates palindrome using both structures.
 
 ---
 
-# Tech Stack
-- Java (JDK 17)
+### UC7 – Deque Optimized Approach
+Uses Double Ended Queue for efficient front/back comparison.
+
+Data Structure used:
+- `ArrayDeque<Character>`
+
+---
+
+### UC8 – Linked List Approach
+Stores characters in LinkedList and compares from both ends.
+
+Data Structure used:
+- `LinkedList<Character>`
+
+---
+
+### UC9 – Recursive Palindrome Checker
+Uses recursion to check palindrome.
+
+Concept used:
+- Recursion
+- Base case & recursive case
+
+---
+
+### UC10 – Ignore Case & Spaces
+Enhancement:
+- Case insensitive
+- Ignores spaces and special characters
+
+Example:
+A man a plan a canal Panama → Palindrome
+
+
+---
+
+### UC11 – Object Oriented Design
+Introduced service class:
+- `PalindromeService`
+  Encapsulated palindrome logic using OOP principles.
+
+Concepts used:
+- Encapsulation
+- Separation of concerns
+
+---
+
+### UC12 – Strategy Pattern Implementation
+Implemented multiple algorithms using Strategy Design Pattern.
+
+Strategies:
+- Stack Strategy
+- Deque Strategy
+
+Concepts used:
+- Interface
+- Polymorphism
+- Strategy Pattern
+
+---
+
+### UC13 – Performance Comparison
+Measured execution time of algorithms using:
+System.nanoTime()
+
+
+Compared:
+- Stack Strategy
+- Deque Strategy
+
+Displays execution time in nanoseconds.
+
+---
+
+## 🛠 Technologies Used
+- Java
 - IntelliJ IDEA
-- Git
-- GitHub
+- Git & GitHub
 
 ---
 
-# Git Workflow Followed
-
-For each Use Case:
-
-1. Created new feature branch
-2. Implemented logic
-3. Committed & pushed branch
+## 🌱 Git Workflow Followed
+For every Use Case:
+1. Created new branch
+2. Implemented feature
+3. Committed changes
 4. Created Pull Request
 5. Merged into `main`
 
-### Branches Created
-- UC1-WelcomePage
-- UC2-HardcodedPalindrome
-- UC3-StringReversePalindrome
-- UC4-CharArrayPalindrome
-- UC5-StackPalindrome
-- UC6-QueueStackPalindrome
+This demonstrates real-world Git workflow.
 
 ---
 
-# How to Run
-
-1. Open project in IntelliJ
-2. Run `PalindromeCheckerApp.java`
-3. Enter input in console
-
----
-
-# Learning Outcome
-
-This project demonstrates:
-
-- Java fundamentals
-- Multiple palindrome algorithms
-- Stack & Queue data structures
-- Professional Git workflow
-- Branching & Pull Requests
-
----
-
-**Project Status: Completed (UC1 – UC6)**
+## 👩‍💻 Author
+**Sameeksha Khurpe**
